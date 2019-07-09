@@ -1,13 +1,12 @@
 # Soal
-# Sebuah daerah dijangkiti oleh epidemi demam berdarah.
-# Misal f(t) menyatakan banyak orang yang terjangkit demam berdarah setelah t minggu
-# Seorang petugas mencatat data sebagai berikut:
-#   --------------------------------------
-#   | t(minggu) | 1  |  2 |  4 |  5 |  7 |
-#   --------------------------------------
-#   |   f(t)    | 3  |  8 | 15 | 25 | 40 |
-#   --------------------------------------
-# Perkirakanlah jumlah penderita demam berdarah setelah 6 minggu
+# Tabel Harga Bordiran dari Tahun ke Tahun
+# Misal f(x) menyatakan harga bordiran
+#   ---------------------------------------------------
+#   |     X     | 0.10  |  0.15 | 0.20 | 0.25 |  0.3 |
+#   ---------------------------------------------------
+#   |   f(X)    | 2500  |  3000 | 3700 | 4800 | 6800 |
+#   ---------------------------------------------------
+# Akan diuji pada x=0.22
 
 from pylab import *
 
@@ -39,24 +38,24 @@ def N(xc, x, y):
 x = []
 y = []
 # initial value
-x.append(1)
-x.append(2)
-x.append(4)
-x.append(5)
-x.append(7)
+x.append(0.10)
+x.append(0.15)
+x.append(0.20)
+x.append(0.25)
+x.append(0.30)
 
-y.append(3)
-y.append(8)
-y.append(15)
-y.append(25)
-y.append(40)
+y.append(2500)
+y.append(3000)
+y.append(3700)
+y.append(4800)
+y.append(6800)
 
 # for testing
-xc = 6
+xc = 0.22
 yc = N(xc, x, y)
 
 print('')
-print('Jadi jumlah penderita demam berdarah setelah ', xc, ' minggu adalah ', yc)
+print('Jadi harga optimal bordiran pada ', xc, ' adalah ', yc)
 # plot
 t = linspace(-7, 7, 100)
 u = N(t, x, y)
